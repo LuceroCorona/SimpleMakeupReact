@@ -4,7 +4,7 @@ function ItemCount(props) {
     const [count, setCount] = useState(props.initial);
 
     function handleAdd() {
-      if (count<stock) {
+      if (count<props.stock) {
         setCount(count+1);
       }
     }
@@ -14,23 +14,19 @@ function ItemCount(props) {
       setCount(count-1);
     }
 
-    function handleFinish () {
-      prompt=('Todos los productos fueron agregados a tu carrito');
-    }
-
     return (
         <section> 
         <div>
-          <button onClick={handleSubstract()}> - </button>
+          <button onClick={handleSubstract}> - </button>
           <span> {count} </span>
-          <button onClick={handleAdd()}> + </button>
+          <button onClick={handleAdd}> + </button>
           <div>
-            <button onClick={handleFinish}> Agregar al carrito </button>
+            <button> Agregar al carrito </button>
           </div>
         </div>
 
       </section>  
-    )
+    );
 }
 
 export default ItemCount
