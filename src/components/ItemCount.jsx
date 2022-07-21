@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 function ItemCount(props) {
-    const [count, setCount] = useState(props.initial);
+  const [count, setCount] = useState(props.initial);
 
     function handleAdd() {
       if (count<props.stock) {
@@ -15,7 +15,7 @@ function ItemCount(props) {
     }
 
     return (
-        <section> 
+      <section> 
         <div>
           <button onClick={handleSubstract}> - </button>
           <span> {count} </span>
@@ -24,9 +24,8 @@ function ItemCount(props) {
             <button> Agregar al carrito </button>
           </div>
         </div>
-
       </section>  
-    );
+  );
 }
 
 export default ItemCount

@@ -1,4 +1,4 @@
-import carrito from "../assets/img/cart_icon.jpg"
+import carrito from "../assets/img/cart_icon.png"
 
 const CartWidget = () => {
     const amount = 0;
