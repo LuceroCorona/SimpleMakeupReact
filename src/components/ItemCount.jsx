@@ -1,31 +1,57 @@
-import React, {useState} from 'react';
-
-function ItemCount(props) {
-  const [count, setCount] = useState(props.initial);
-
-    function handleAdd() {
-      if (count<props.stock) {
-        setCount(count+1);
-      }
+import { useState } from "react";
+const ItemCount = ({ stock = 2, initial = 0, onAdd }) => {
+  const [count, setCount] = useState(initial);
+  const updateCount = (op) => {
+    if (op === "-" && count > 0) {
+      setCount(count - 1);
     }
-
-    function handleSubstract() {
-      if (count>1)
-      setCount(count-1);
+    if (op === "+" && count < stock) {
+      setCount(count + 1);
     }
-
-    return (
-      <section> 
-        <div>
-          <button onClick={handleSubstract}> - </button>
-          <span> {count} </span>
-          <button onClick={handleAdd}> + </button>
-          <div>
-            <button> Agregar al carrito </button>
-          </div>
-        </div>
-      </section>  
+  };
+  const updateCountInput = (e) => {
+    const { value } = e.target;
+    if (value <= stock) {
+      setCount(isNaN(value) ? 0 : parseInt(value));
+    }
+  };
+  return (
+    <>
+      <div className="input-group input-spinner mb-3 d-flex justify-content-center">
+        <input
+          onChange={(e) => updateCountInput(e)}
+          className="border-primary"
+          placeholder=""
+          value={count}
+          type="number"
+        />
+        <button
+          onClick={() => updateCount("-")}
+          className="btn btn-icon btn-primary"
+          type="button"
+        >
+          -
+        </button>
+        <button
+          onClick={() => updateCount("+")}
+          className="btn btn-icon btn-primary"
+          type="button"
+        >
+          +
+        </button>
+      </div>
+      <div className="d-flex justify-content-center">
+        <button
+          onClick={() => onAdd(count)}
+          type="button"
+          className="btn btn-info"
+          disabled={count === "" || count === 0}
+        >
+          Comprar 🤗
+        </button>
+      </div>
+    </>
   );
-}
+};
 
-export default ItemCount
+export default ItemCount;

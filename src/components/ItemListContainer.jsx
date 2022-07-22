@@ -1,28 +1,39 @@
-import React, {useEffect, useState} from 'react';
-import products from '../data/products';
-import ItemList from './ItemList';
+import { useState, useEffect } from "react";
+import ItemList from "./ItemList";
+import data from "./utils/data";
+import { useParams } from "react-router-dom";
+import Spinner from "./Spinner";
 
-function getProducts () {
-    return new Promise( (resolve, reject) => {
-        setTimeout(() => {
-            resolve(products);
-        }, 2000);
+const ItemListContainer = () => {
+  const { name } = useParams();
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const promise = new Promise((resolve) => {
+    setTimeout(() => resolve(data), 2000);
+  });
+
+  useEffect(() => {
+    setLoading(true);
+    promise.then((res) => {
+      const products = res;
+      if (name) {
+        setItems(products.filter((product) => product.category == name));
+      } else {
+        setItems(products);
+      }
+      setLoading(false);
     });
-} 
+  }, [name]);
 
-function ItemListContainer() {
-const [products, setProducts] = useState([]);
+  if (loading) return <Spinner />;
 
-useEffect( () => {
-    getProducts().then(respuestaPromise => {
-        console.log(respuestaPromise);
-    });
-}, []);
-
-return (
-    <ItemList products={products}/>
-)
-
+  return (
+    <>
+      <div className="mt-5">
+        <ItemList items={items} />
+      </div>
+    </>
+  );
 };
 
 export default ItemListContainer;

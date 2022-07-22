@@ -1,0 +1,94 @@
+[
+
+  
+    {
+      "id": 1,
+      "title": "Lechuga",
+      "price": 50,
+      "stock": 200,
+      "pictureUrl": "https://img.freepik.com/foto-gratis/lechugas-sobre-superficie-blanca_144627-45175.jpg?t=st=1658447507~exp=1658448107~hmac=bcb1901f902e1d7e9829e456f4062d23b52d5a0af04431688039186fadda1640&w=1380",
+      "category": "Verdura",
+      "description": "Descripción del producto"
+    },
+    {
+      "id": 2,
+      "title": "Rucula",
+      "price": 80,
+      "stock": 80,
+      "pictureUrl": "https://img.freepik.com/foto-gratis/espinacas-sobre-mesa_144627-20711.jpg?t=st=1658447718~exp=1658448318~hmac=ca17da54bc41255ceabb3c2530573e48b770a00821769da960f8f0806bfa2f40&w=1380",
+      "category": "Verdura"
+    },
+    {
+      "id": 3,
+      "title": "Berenjena",
+      "price": 80,
+      "stock": 100,
+      "pictureUrl": "https://img.freepik.com/fotos-premium/berenjena-morada-fresca-isoalted_147493-49.jpg?w=996",
+      "category": "Verdura",
+      "description": "Descripción del producto"
+    },
+    {
+      "id": 4,
+      "title": "Papa",
+      "price": 30,
+      "stock": 300,
+      "pictureUrl": "https://img.freepik.com/foto-gratis/papa-mesa_144627-14820.jpg?t=st=1658448008~exp=1658448608~hmac=a362fb84eff7ec9ac63008881205f90cc1dfc0386f7cb548f832f1ab25d9fc4d&w=826",
+      "category": "Hortaliza",
+      "description": "Descripción del producto"
+
+    },
+    {
+      "id": 5,
+      "title": "Zanahoria",
+      "price": 60,
+      "stock": 58,
+      "pictureUrl": "https://img.freepik.com/foto-gratis/zanahorias-preparadas-comer_1205-49.jpg?1&t=st=1658447908~exp=1658448508~hmac=c9d3cd8d151e3a24edcd301564d2001af64caeff4c2840b844f7767b0ff66680&w=1380",
+      "category": "Hortaliza",
+      "description": "Descripción del producto"
+    },
+    {
+      "id": 6,
+      "title": "Cebolla",
+      "price": 40,
+      "stock": 82,
+      "pictureUrl": "https://img.freepik.com/foto-gratis/cebolla_144627-27528.jpg?t=st=1658448042~exp=1658448642~hmac=4c55302b2b7e22828383dd1e243a861d92893fda443b540e4af1e9036b8d8f59&w=826",
+      "category": "Hortaliza",
+      "description": "Descripción del producto"
+    },
+    {
+      "id": 7,
+      "title": "Batata",
+      "price": 60,
+      "stock": 87,
+      "pictureUrl": "https://img.freepik.com/foto-gratis/batata-camote-morado_1205-551.jpg?1&t=st=1658448066~exp=1658448666~hmac=4a6cfffa7ec3cb08885606b2890444964f4ff04edadde0a6584b4eeaf6a5752a&w=1380",
+      "category": "Hortaliza",
+      "description": "Descripción del producto"
+    },
+    {
+      "id": 8,
+      "title": "Arroz",
+      "price": 60,
+      "stock": 87,
+      "pictureUrl": "https://img.freepik.com/fotos-premium/arroz-recipiente-sobre-mesa-blanca_253984-853.jpg?w=1380",
+      "category": "Otro",
+      "description": "Descripción del producto"
+    },
+    {
+      "id": 9,
+      "title": "Pollo",
+      "price": 60,
+      "stock": 87,
+      "pictureUrl": "https://img.freepik.com/fotos-premium/pollo-romero-blanco_23-2147765395.jpg?w=1380",
+      "category": "Otro",
+      "description": "Descripción del producto"
+    },
+    {
+      "id": 10,
+      "title": "Atun",
+      "price": 60,
+      "stock": 87,
+      "pictureUrl": "https://img.freepik.com/fotos-premium/atun-pescado-enlatado-aislado-blanco_62856-4256.jpg?w=900",
+      "category": "Otro",
+      "description": "Descripción del producto"
+    }
+  ]
