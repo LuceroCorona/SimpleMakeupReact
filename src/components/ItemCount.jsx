@@ -47,7 +47,7 @@ const ItemCount = ({ stock = 2, initial = 0, onAdd }) => {
           className="btn btn-info"
           disabled={count === "" || count === 0}
         >
-          Comprar 🤗
+          Comprar
         </button>
       </div>
     </>

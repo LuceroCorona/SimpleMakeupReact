@@ -8,12 +8,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAfb6B7dXvO6hBibG960Cf0c1KIIz-g9OA",
-  authDomain: "comiendopasto-rjs.firebaseapp.com",
-  projectId: "comiendopasto-rjs",
-  storageBucket: "comiendopasto-rjs.appspot.com",
-  messagingSenderId: "319780112765",
-  appId: "1:319780112765:web:4af9d12e7a27a931c2a414"
+  apiKey: "AIzaSyCf3_kQC3813AA34XHfonAiOIHekPvXp1A",
+  authDomain: "simplemakeup-df154.firebaseapp.com",
+  projectId: "simplemakeup-df154",
+  storageBucket: "simplemakeup-df154.appspot.com",
+  messagingSenderId: "667647273463",
+  appId: "1:667647273463:web:48e63256c8d940364026f2"
 };
 
 initializeApp(firebaseConfig);

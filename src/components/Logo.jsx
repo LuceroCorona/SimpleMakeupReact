@@ -1,11 +1,11 @@
-import imgLogo from "../assets/img/comiendopasto_logo.png"
+import imgLogo from "../assets/img/logo.png"
 
 const Logo = () => {
 
     return (
         <>
         <img 
-        style={{width:100}}
+        style={{width:200}}
         src={imgLogo} alt="logo"/>
         </>
     )

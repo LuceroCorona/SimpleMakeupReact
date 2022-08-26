@@ -10,28 +10,23 @@ const ItemListContainer = () => {
 
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    setLoading(true);
-    const db = getFirestore();
-    const itemsCollection = collection(db, "items");
-    getDocs(itemsCollection).then((snapshot) => {
+useEffect(() => {
+  setLoading(true);
+  const db = getFirestore();
+  const itemsCollection = collection(db, "items");
+  getDocs(itemsCollection)
+    .then((snapshot) => {
       const data = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-      setItems(data);
-      setLoading(false);
-    });
-  }, [name]);
+      if (name) {
+        setItems(data.filter((item) => item.category === name));
+      } else {
+        setItems(data);
+      }
+    })
+    .finally(() => setLoading(false));
+}, [name]);
 
-  if (loading) {
-    return <Spinner />;
-  }
-
-  return (
-    <>
-      <div className="mt-5">
-        <ItemList items={items} />
-      </div>
-    </>
-  );
-};
+return <>{loading ? <Spinner  /> :         <ItemList items={items} />}</>;
+}
 
 export default ItemListContainer;

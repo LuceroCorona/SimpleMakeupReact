@@ -39,7 +39,7 @@ return (
           type="submit"
           className="btn btn-info"
         >
-          Preparar pedido 🙌  
+          Preparar pedido  
         </button>
       </form>
       </>

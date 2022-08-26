@@ -29,7 +29,7 @@ const ItemDetail = ({ item }) => {
       )}
       <div className="d-flex justify-content-center my-3">
         <Link to="/cart/">
-          <button className="btn btn-warning">Ir al carrito 🥗</button>
+          <button className="btn btn-warning">Ir al carrito</button>
         </Link>
       </div>
     </div>

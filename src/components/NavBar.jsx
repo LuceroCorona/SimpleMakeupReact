@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import WidgetCart from "./WidgetCart";
 import Logo from "./Logo";
 
@@ -9,7 +9,6 @@ const NavBar = () => {
         <div className="container-fluid">
         <Link className="navbar-brand" to={"/"}>
             <Logo/>
-            Comiendo Pasto
          </Link>
           <button
             className="navbar-toggler"
@@ -24,18 +23,30 @@ const NavBar = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <Link
+              <NavLink
                 style={{ textDecoration: "none", margin: "1rem" }}
-                to={"category/Verdura"}
+                to={"category/rostro"}
               >
-                Verdura
-              </Link>
-              <Link
+                Rostro
+              </NavLink>
+              <NavLink
                 style={{ textDecoration: "none", margin: "1rem" }}
-                to={"category/Hortaliza"}
+                to={"category/ojos"}
               >
-                Hortaliza
-              </Link>
+                Ojos
+              </NavLink>
+              <NavLink
+                style={{ textDecoration: "none", margin: "1rem" }}
+                to={"category/labios"}
+              >
+                Labios
+              </NavLink>
+              <NavLink
+                style={{ textDecoration: "none", margin: "1rem" }}
+                to={"category/skincare"}
+              >
+                Skincare
+              </NavLink>
             </div>
           </div>
           <WidgetCart />
